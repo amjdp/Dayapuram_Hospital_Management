@@ -1,0 +1,71 @@
+{% extends 'hms_admin/admin_master.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href=" {% static 'assets/css/view_admin.css' %}">
+
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center mt-5">
+                <div>
+                    <h2>View Admin</h2>
+
+                    <div class="mt-5" style="width:80%; margin-left: 10%;">
+
+
+                        <table class="table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th> Admin Name </th>
+                                    <th> Login ID </th>
+                                    <th width="35%"> Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td> 
+                                        <button type="button" class="btn btn-success">EDIT</button> 
+                                        <button type="button" class="btn btn-danger">DELETE</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td> 
+                                        <button type="button" class="btn btn-success">EDIT</button> 
+                                        <button type="button" class="btn btn-danger">DELETE</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>  </td>
+                                    <td>  </td>
+                                    <td> 
+                                        <button type="button" class="btn btn-success">EDIT</button> 
+                                        <button type="button" class="btn btn-danger">DELETE</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

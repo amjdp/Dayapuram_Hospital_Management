@@ -1,0 +1,31 @@
+
+{% extends 'doctor/doctor_home.html' %}
+{% load static %}
+
+{% block header %}
+{% endblock %}
+
+
+{% block content %}
+
+	<!-- Patient  -->
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<button type="button"> Add New </button>
+				<div class="mt-5">
+					<table class="table table-primary table-striped">
+						<tr>
+							<th> Date </th>
+							<th> Patient ID </th>
+							<th> Patient </th>
+							<th> Status </th>
+							<th> Options </th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+{% endblock %}

@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Select Box  -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <!-- Home icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        .container-fluid {
+            margin-left: 10px;
+        }
+
+        #header_container {
+            background-color: #111194;
+            /* color: #ffffff; */
+            height: 80px;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding-top: 16px;
+            font-size: 40px;
+        }
+
+        #image {
+            background-image: url("https://care.bestdocapp.com/_nuxt/img/web_banner.02626a5.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .select_tab {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            /* gap: 10px; */
+            /* background-color: #2196F3; */
+            padding: 10px;
+            height: 100px;
+            width: 100%;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .s-1 {
+            grid-area: 1/1/2/2;
+        }
+
+        .s-2 {
+            grid-area: 1/2/2/3;
+            width: 300px;
+        }
+
+        .s-3 {
+            grid-area: 1/3/2/4;
+            width: 300px;
+        }
+
+        .s-4 {
+            grid-area: 1/4/2/5;
+        }
+
+        .select_tab>div {
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            /* border: 1px solid black; */
+            text-align: center;
+            font-size: 50px;
+        }
+
+        /* select {
+            width: 500px;
+            text-align: left;
+            border-radius: 6px;
+            border: 1px solid rgb(217, 214, 214);
+            background-color: #fff;
+            font-size: 45px;
+            font-weight: 300;
+            color: #8D8D8D;
+            margin-top: 16px;
+            padding: 10px;
+            -webkit-box-shadow: 0px 1px 1px #716f71;
+            -moz-box-shadow: 0px 1px 1px #716f71;
+            box-shadow: 0px 1px 1px #716f71;
+        } */
+
+
+        select {
+            font-size: 20px;
+            letter-spacing: 1px;
+            padding: 5px;
+            border: 0;
+            background: whitesmoke;
+            border-bottom: 1px solid silver;
+            width: 300px;
+            height: 50px;
+            color: gray;
+        }
+
+        /* select {
+            font-family: fontAwesome
+        } */
+
+        .next {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+            /* gap: 10px; */
+            /* background-color: #2196F3; */
+            /* padding: 10px; */
+            height: 50px;
+            /* margin-top: 50px; */
+        }
+
+        .next>div {
+            text-align: center;
+            font-size: 50px;
+            margin-left: 50px;
+        }
+
+        .n-1 {
+            grid-area: 1/1/2/6;
+        }
+
+        .n-2 {
+            grid-area: 1/6/2/8;
+        }
+
+        .n-3 {
+            grid-area: 1/8/2/13;
+        }
+
+        button .nxt {
+            width: 50%;
+            font-size: medium;
+        }
+    </style>
+
+
+    {% block header %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <!-- header container -->
+        <div class="row" id="header_container">
+            <div class="col-11">
+                <h1>BOOK APPOINTMENT</h1>
+            </div>
+            <div class="col-1 mt-3">
+                <a href="{% url 'patient:phome' %}"><i class="fa fa-home" style="font-size:48px;color:white"></i></a>
+            </div>
+        </div>
+        <!-- header container end-->
+
+        {% block content %}
+
+        <!-- bg-image container -->
+        <div class="row" id="image">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <!-- bg-image container end-->
+
+
+        <!-- select container -->
+        <form>
+            <div class="row select_tab" id="select_container">
+
+                <div class="col-3 s-1"></div>
+                <div class="col-3 s-2">
+                    <div>
+                        <select>
+                            <option>Select Department</option>
+                            <option>Heart Centre</option>
+                            <option>Neuro Science</option>
+                            <option>Liver and gastro science</option>
+                            <option>Women Care</option>
+                            <option>Child Care</option>
+                            <option> orthopaedics</option>
+                            <option> Renal Care</option>
+                            <option> pulmonology</option>
+                            <option> Endocrine sciences</option>
+                            <option> opthalmology</option>
+                            <option>Dental Care</option>
+                            <option> Surgical oncology</option>
+                            <option> psycyhiatry </option>
+                            <option> Anaesthesiology</option>
+                            <option> Dermatology</option>
+                            <option> Radiology</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3 s-3">
+                    <div>
+                        <select>
+                            <option>Select Doctor</option>
+                            <option value="">John Marshal</option>
+                            <option>Marshal Root</option>
+                            <option>Siamon John</option>
+                            <option>Rishat Ahmed</option>
+                            <option>John Marshal</option>
+                            <option>Marshal Root</option>
+                            <option>Siamon John</option>
+                            <option>Select Doctors</option>
+                            <option>John Marshal</option>
+                            <option>Marshal Root</option>
+                            <option>Siamon John</option>
+                            <option>Rishat Ahmed</option>
+                            <option>John Marshal</option>
+                            <option>Marshal Root</option>
+                            <option>Siamon John</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3 s-4"></div>
+
+            </div>
+            <!-- row end  -->
+
+
+            <div class="row next">
+                <div class="col-5 n-1"></div>
+                <div class="col-2 n-2">
+                    <a href="{% url 'patient:appointment_2' %}" class="btn btn-primary nxt">NEXT</a>
+                </div>
+                <div class="col-5 n-3"></div>
+            </div>
+        </form>
+        <!-- select container end-->
+
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>

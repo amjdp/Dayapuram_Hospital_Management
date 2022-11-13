@@ -1,0 +1,72 @@
+{% extends 'hms_admin/admin_master.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href=" {% static 'assets/css/view_admin.css' %}">
+
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center mt-5">
+                <div>
+                    <h2>View Available Doctors</h2>
+
+                    <div class="mt-5" style="width:95%; ">
+
+
+                        <table style="border-spacing: 30px;" class="table" >
+                            <thead class="table-dark">
+                                <tr>
+                                    <th> Name </th>
+                                    <th>Contact</th>
+                                    <th>Department</th>
+                                    <th> Login ID </th>
+                                    <th>Consultancy Charge</th>
+                                    <th>Education</th>
+                                    <th> Experience </th>
+                                    <th width="10%"> Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2"> Lorem, ipsum. </td>
+                                    <td rowspan="2"> 98545487421 </td>
+                                    <td rowspan="2"> Cardiology </td>
+                                    <td rowspan="2"> 13454 </td>
+                                    <td rowspan="2"> Rs. </td>
+                                    <td rowspan="2"> </td>
+                                    <td rowspan="2"></td>
+                                    <td> 
+                                        <button type="button" class="btn btn-success">EDIT</button>   
+                                                                           
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">DELETE</button>  
+                                    </td>
+                                </tr>
+                              
+                                
+
+                        
+                            </tbody>
+                          </table>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

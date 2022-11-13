@@ -1,0 +1,475 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+    <meta name="author" content="themefisher.com">
+
+    <title>Novena- Health & Care Medical template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="{% static 'plugins/icofont/icofont.min.css' %}">
+    <!-- Slick Slider  CSS -->
+    <link rel="stylesheet" href=" {% static 'plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href=" {% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/dr-profile-modal.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/patient_home.css' %}">
+
+    <!-- Logout  -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+        /* .nav-back {
+            background: rgba(17, 219, 207, 0.8);
+            color: #fff;
+        }
+
+        .navbar-brand {
+            color: #000;
+        }
+
+        .navbar-brand:hover {
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #000;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            outline: none !important;
+        } */
+
+
+
+        /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+        #hero {
+            width: 100%;
+            height: 50vh;
+            background: url("./images/hero.jpg") center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #hero .container {
+            padding-top: 80px;
+        }
+
+        #hero:before {
+            content: "";
+            background: rgba(84, 158, 190, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            color: rgb(8, 29, 86);
+        }
+
+        #hero h2 {
+            color: #eee;
+            margin-bottom: 40px;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .main-btn {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+            margin: 10px;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .main-btn:hover {
+            background: #0f71cb;
+            border: 2px solid #0f71cb;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .form-group .btn-form {
+            background: #0f71cb;
+            border: 2px solid #0f71cb;
+            text-decoration: none;
+            color: #000;
+        }
+
+
+    </style>
+
+    <!-- {% block header %}
+   
+    {% endblock %} -->
+
+</head>
+
+<body id="top">
+
+    <header>
+        <div class="header-top-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <ul class="top-bar-info list-inline-item pl-0 mb-0">
+                            <li class="list-inline-item"><a href="mailto:support@gmail.com"><i
+                                        class="icofont-support-faq mr-2"></i>support@novena.com</a></li>
+                            <li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address Ta-134/A, New
+                                York, USA </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-lg-right top-right-bar mt-2 mt-lg-0">
+                            <a href="tel:+23-345-67890">
+                                <span>Call Now : </span>
+                                <span class="h4">823-4565-13456</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container text-center position-relative">
+                <h1>24/7 Care is available</h1>
+                <!-- <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti.</h2> -->
+                <a href="#about" class="main-btn">Get Started</a>
+            </div>
+        </section>
+        <!-- End Hero -->
+        <div class="container mt-4 p-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-center my-4">
+                        Book an Appointment
+                    </h2>
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Patient Name
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <input type="text" id="patient-name" class="form-control" placeholder="Enter your Name"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                ID/OP No
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <input type="tel" id="contact" class="form-control" placeholder="Enter OP No" required>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Department
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <select class="form-control" id="dept">
+                                    <option>select department</option>
+                                    <option>Heart Centre</option>
+                                    <option>Neuro Science</option>
+                                    <option>Liver and gastro science</option>
+                                    <option>Women Care</option>
+                                    <option>Child Care</option>
+                                    <option> orthopaedics</option>
+                                    <option> Renal Care</option>
+                                    <option> pulmonology</option>
+                                    <option> Endocrine sciences</option>
+                                    <option> opthalmology</option>
+                                    <option>Dental Care</option>
+                                    <option> Surgical oncology</option>
+                                    <option> psycyhiatry </option>
+                                    <option> Anaesthesiology</option>
+                                    <option> Dermatology</option>
+                                    <option> Radiology</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Doctors
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <select class="form-control" id="doctor">
+                                    <option>Select Doctors</option>
+                                    <option>Software Design</option>
+                                    <option>Development cycle</option>
+                                    <option>Software Development</option>
+                                    <option>Maintenance</option>
+                                    <option>Process Query</option>
+                                    <option>Cost and Duration</option>
+                                    <option>Modal Delivery</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Date
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <input type="date" id="date" class="form-control">
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Time
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <input type="time" id="time" class="form-control">
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4">
+                                Payment
+                            </label>
+                            <div class="col-sm-8 col-lg-8">
+                                <select class="form-control" id="doctor">
+                                    <option>Select</option>
+                                    <option>Software Design</option>
+                                    <option>Development cycle</option>
+                                    <option>Software Development</option>
+                                    <option>Maintenance</option>
+                                    <option>Process Query</option>
+                                    <option>Cost and Duration</option>
+                                    <option>Modal Delivery</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="form-group row justify-content-end">
+                            <div class="col-sm-5">
+                                <button type="submit" class="btn btn-form">
+                                    Confirm
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2 id="services" class="text-center my-4"></h2>
+                    <ul id="consultations" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	<!-- footer Start -->
+	<footer class="footer section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 mr-auto col-sm-6">
+					<div class="widget mb-5 mb-lg-0">
+						<div class="logo mb-4">
+							<img src="{% static 'images/logo.png' %}" alt="" class="img-fluid">
+						</div>
+						<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur
+							veritatis eveniet distinctio possimus.</p>
+
+						<ul class="list-inline footer-socials mt-4">
+							<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i
+										class="icofont-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i
+										class="icofont-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i
+										class="icofont-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="widget mb-5 mb-lg-0">
+						<h4 class="text-capitalize mb-3">Department</h4>
+						<div class="divider mb-4"></div>
+
+						<ul class="list-unstyled footer-menu lh-35">
+							<li><a href="#">Surgery </a></li>
+							<li><a href="#">Wome's Health</a></li>
+							<li><a href="#">Radiology</a></li>
+							<li><a href="#">Cardioc</a></li>
+							<li><a href="#">Medicine</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="widget mb-5 mb-lg-0">
+						<h4 class="text-capitalize mb-3">Support</h4>
+						<div class="divider mb-4"></div>
+
+						<ul class="list-unstyled footer-menu lh-35">
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Company Support </a></li>
+							<li><a href="#">FAQuestions</a></li>
+							<li><a href="#">Company Licence</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="widget widget-contact mb-5 mb-lg-0">
+						<h4 class="text-capitalize mb-3">Get in Touch</h4>
+						<div class="divider mb-4"></div>
+
+						<div class="footer-contact-block mb-4">
+							<div class="icon d-flex align-items-center">
+								<i class="icofont-email mr-3"></i>
+								<span class="h6 mb-0">Support Available for 24/7</span>
+							</div>
+							<h4 class="mt-2"><a href="tel:+23-345-67890">Support@email.com</a></h4>
+						</div>
+
+						<div class="footer-contact-block">
+							<div class="icon d-flex align-items-center">
+								<i class="icofont-support mr-3"></i>
+								<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
+							</div>
+							<h4 class="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-btm py-4 mt-5">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6">
+						<div class="copyright">
+							&copy; Copyright Reserved to <span class="text-color">Novena</span> by <a
+								href="https://themefisher.com/" target="_blank">Themefisher</a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="subscribe-form text-lg-right mt-5 mt-lg-0">
+							<form action="#" class="subscribe">
+								<input type="text" class="form-control" placeholder="Your Email address">
+								<a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4">
+						<a class="backtop js-scroll-trigger" href="#top">
+							<i class="icofont-long-arrow-up"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="main.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

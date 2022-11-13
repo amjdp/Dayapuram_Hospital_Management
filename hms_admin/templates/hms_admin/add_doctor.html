@@ -1,0 +1,84 @@
+{% extends 'hms_admin/admin_master.html' %}
+{% load static %}
+
+{% block header %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<link rel="stylesheet" href=" {% static 'assets/css/add_doctor.css' %}">
+
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div>
+                    <h2 class="text-center mb-3">Add New Doctor</h2>
+
+
+                    <div style="display:flex;width:100%;">
+                        <form>
+                            <div style="width:100%;">
+                                <p>Name</p>
+                                <input name="name" autofocus>
+                            </div>
+                            <div style="width:100%;">
+                                <p>Mobile Number</p>
+                                <input name="id">
+                            </div>
+
+                            <div style="width:100%;">
+                                <p>Department</p>
+                                <select id="select">
+                                    <option value="opt1">Select Department</option>
+                                    <option value="opt2">Heart Care</option>
+                                    <option value="opt3">Women Care</option>
+                                    <option value="opt4">Child Care</option>
+                                    <option value="opt5">Neuroscience</option>
+                                    <option value="opt6">Liver & gastro science</option>
+                                    <option value="opt7">Orthopedics</option>
+                                    <option value="opt8">Renal Care</option>
+                                    <option value="opt9">Radiology</option>
+                                </select>
+                            </div>                     
+
+                            <div style="width:100%;">
+                                <p>Qualification</p>
+                                <input name="phone">
+                            </div>
+                            <div style="width:100%;">
+                                <p>Experience</p>
+                                <input name="phone">
+                            </div>
+                            <div style="width:40%;">
+                                <p>Consultancy Charge</p>
+                                <input name="phone">
+                            </div>
+                            <div style="width:50%; padding-left: 10%;">
+                                <p>Upload Photo</p>
+                                <input type="file" id="dr_img" name="dr_photo">
+                            </div>
+
+                            <p>
+                                <a>SUBMIT</a>
+                            </p>
+
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
