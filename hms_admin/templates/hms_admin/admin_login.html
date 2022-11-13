@@ -22,14 +22,15 @@
         <label for="email" class="label">Email</label><br />
         <input type="text" id="email" name="email" required /><br />
         <label for="password" class="label">Password</label><br />
-        <input type="password" id="password" name="password" /><br /><br />
+        <input type="password" id="password" name="password" /><br />
         <label for="remember" class="remember"> Remember me </label>
-        <input type="checkbox" id="remember" name="Remember" />
+        <input type="checkbox" id="remember" name="Remember" /> <br />
         <!-- <a href="{% url 'hms_admin:admin_home' %}">
           <button type="submit">Login</button>
         </a> -->
-        <a class="btn btn-primary" href="{% url 'hms_admin:admin_home' %}"> Login </a>
-        <label class="label"> Do not have an account? </label>  <a href="adminsignup">Signup here</a>
+        <a class="btn btn-info login" href="{% url 'hms_admin:admin_home' %}"> Login </a> <br />
+        <label class="label"> Do not have an account? </label>  <br>
+        <a class="btn btn-primary-outline" href="adminsignup" id="signup">Signup here</a>
       </form>
       
       <!-- <div class="text-center">Do not have account? <a href="adminsignup">Signup here</a></div> -->
