@@ -127,15 +127,15 @@
 
     <script>
         function doctor() {
-            location.replace("{% url 'doctor:dr-home' %}")
+            location.replace("{% url 'common:login' %}")
         }
 
         function patient() {
-          location.replace("{% url 'patient:phome' %}")
+          location.replace("{% url 'common:login' %}")
         }
 
         function staff() {
-          location.replace("{% url 'receptionist:home' %}")
+          location.replace("{% url 'common:login' %}")
         }
     </script>
 

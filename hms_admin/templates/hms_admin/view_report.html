@@ -3,8 +3,16 @@
 
 {% block header %}
 <style>
+    *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     h2 {
         text-align: center;
+        font-size: 40px;
+        color: rgb(2, 2, 104);
+    }
+    ul{
+        font-size: 20px;
     }
 </style>
 
@@ -19,7 +27,7 @@
 <section>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-10 mt-5">
+            <div class="col-lg-12 mb-2">
                 <div>
                     <h2>Patient Report Panel</h2>
 
@@ -96,7 +104,7 @@
 
                             </script>
 
-                            <li id="pre"> Prescription Record </li> <br>
+                            <!-- <li id="pre"> Prescription Record </li> <br>
 
                             <div id="prescription_record" style="display: none;">
                                 <table class="table table-primary table-striped">
@@ -113,9 +121,9 @@
                                         <td> View </td>
                                     </tr>
                                 </table>
-                            </div>
+                            </div> -->
 
-                            <script>
+                            <!-- <script>
 
                                 $(document).ready(function () {
                                     $('#pre').click(function () {
@@ -123,7 +131,7 @@
                                     });
                                 })
 
-                            </script>
+                            </script> -->
 
                             <li id="bill"> Billing Report </li> <br>
 

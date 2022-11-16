@@ -1,0 +1,54 @@
+{% extends 'patient/patient_home.html' %}
+{% load static %}
+
+{% block header %}
+<style>
+    h3 {
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <!-- <span class="text-white">Book your Seat</span> -->
+                    <h1 class="text-capitalize mb-5 text-lg">Hello, Patient Name</h1>
+                    <h3 class="text-capitalize "> Welcome to Hospital Name </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3">
+                <button onclick="pt_login()" type="button" class="btn btn-info">Login</button>
+            </div>
+            <div class="col-lg-3">
+                <button onclick="pt_register()" type="button" class="btn btn-danger">Register Your Account</button>
+            </div>
+            <div class="col-lg-3"></div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    function pt_login() {
+        location.replace("{% url 'patient:pt_login' %}")
+    }
+    function pt_register() {
+        location.replace("{% url 'patient:pt_reg' %}")
+    }
+</script>
+
+{% endblock %}

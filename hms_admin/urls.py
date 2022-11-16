@@ -17,5 +17,8 @@ urlpatterns = [
     path('view_department',views.view_dt,name='view_dt'),
     path('change_password',views.chg_pwd,name='chg_pwd'),
     path('admin_profile',views.adm_prof,name='prof'),
-    path('admin_login',views.admin_login,name='login')
+    path('admin_login',views.admin_login,name='login'),
+    path('add_staff',views.add_staff,name='add_staff'),
+    path('view_staff',views.view_staff,name='view_staff'),
+    path('admin_logout',views.admin_logout,name='admin_logout')
 ]

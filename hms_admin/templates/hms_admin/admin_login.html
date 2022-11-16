@@ -17,22 +17,21 @@
 
     <div>
 
-      <form id="admin_login_form">
+      <form id="admin_login_form" method="POST">
+        {% csrf_token %}
+
         <p>Login</p>
         <label for="email" class="label">Email</label><br />
-        <input type="text" id="email" name="email" required /><br />
+        <input type="text" id="admin_email" name="admin_email" required /><br />
         <label for="password" class="label">Password</label><br />
-        <input type="password" id="password" name="password" /><br /><br />
-        <label for="remember" class="remember"> Remember me </label>
-        <input type="checkbox" id="remember" name="Remember" />
-        <!-- <a href="{% url 'hms_admin:admin_home' %}">
-          <button type="submit">Login</button>
-        </a> -->
-        <a class="btn btn-primary" href="{% url 'hms_admin:admin_home' %}"> Login </a>
-        <label class="label"> Do not have an account? </label>  <a href="adminsignup">Signup here</a>
+        <input type="password" id="admin_password" name="admin_password" /><br /><br />
+        <!-- <label for="remember" class="remember"> Remember me </label>
+        <input type="checkbox" id="remember" name="Remember" /> -->
+          <button type="submit" >Login</button>
+
+          {{invalid_data}}
       </form>
       
-      <!-- <div class="text-center">Do not have account? <a href="adminsignup">Signup here</a></div> -->
 
     </div>
     <!-- <script src="{% static 'assets/css/login.js' %}"></script> -->

@@ -1,94 +1,141 @@
-/* image source: https://www.pexels.com/photo/blooming-sakura-tree-in-daylight-6830332/ */
+img {
+    width: 100%;
+  }
 
-body {
-    /* background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-05.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-}
+  .login {
+    height: 700px;
+    width: 100%;
+    background: radial-gradient(#653d84, #332042);
+    position: relative;
+  }
 
-p {
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #f7fcfd;
-    text-shadow:
-        2px 2px 0 rgb(4, 81, 168),
-        2px -2px 0 rgb(4, 81, 168),
-        -2px 2px 0 rgb(4, 81, 168),
-        -2px -2px 0 rgb(4, 81, 168),
-        2px 0px 0 rgb(4, 81, 168),
-        0px 2px 0 rgb(4, 81, 168),
-        -2px 0px 0 rgb(4, 81, 168),
-        0px -2px 0 rgb(4, 81, 168);
-}
-
-form {
-    background-color: hsla(110, 29%, 76%, 0.027);
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 2rem;
-    font-weight: 900;
-    color: rgb(4, 5, 13);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 30%;
-    line-height: 0.6;
+  .login_box {
+    width: 1050px;
+    height: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    display: flex;
+    overflow: hidden;
+  }
 
-input {
-    border-radius: 5rem;
-    border: none;
-    width: 300px;
-    height: 50px;
-}
+  .login_box .left {
+    width: 41%;
+    height: 100%;
+    padding: 25px 25px;
 
-.remember {
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 900;
-    /* margin-right: 10rem; */
-}
+  }
 
-#remember {
-    height: 15px;
-    width: 15px;
-    margin-left: 200px;
-    margin-top: -0.65rem;
-}
+  .login_box .right {
+    width: 59%;
+    height: 100%
+  }
 
-button {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    font-family: Helvetica;
-    font-size: 25px;
-    font-weight: 900;
-    background-color: rgb(4, 81, 168);
-    color: white;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    border: none;
-    border-radius: 50px;
-    width: 150px;
-    height: 60px;
-}
+  .left .top_link a {
+    color: #452A5A;
+    font-weight: 400;
+  }
 
-#error {
+  .left .top_link {
+    height: 20px
+  }
+
+  .left .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    width: 73%;
+    margin: auto;
+  }
+
+  .left h3 {
     text-align: center;
-    width: 35%;
-    margin: 0 auto;
-    background-color: rgb(4, 81, 168);
-    color: white;
-    font-family: Helvetica;
-    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .left input {
+    border: none;
+    width: 80%;
+    margin: 15px 0px;
+    border-bottom: 1px solid #4f30677d;
+    padding: 7px 9px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .left {
+    background: linear-gradient(-45deg, #dcd7e0, #fff);
+  }
+
+  .submit {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    background: #583672;
+    color: #fff;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+    -moz-box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+    box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+  }
+
+span{
+    margin-left: 70px;
 }
+
+  .right {
+    background: linear-gradient(212.38deg, rgba(242, 57, 127, 0.7) 0%, rgba(175, 70, 189, 0.71) 100%), url(https://static.seattletimes.com/wp-content/uploads/2019/01/web-typing-ergonomics-1020x680.jpg);
+    color: #fff;
+    position: relative;
+  }
+
+  .right .right-text {
+    height: 100%;
+    position: relative;
+    transform: translate(0%, 45%);
+  }
+
+  .right-text h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+  }
+
+  .right-text h5 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .right .right-inductor {
+    position: absolute;
+    width: 70px;
+    height: 7px;
+    background: #fff0;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%, 0%);
+  }
+
+  .top_link img {
+    width: 28px;
+    padding-right: 7px;
+    margin-top: -3px;
+  }
