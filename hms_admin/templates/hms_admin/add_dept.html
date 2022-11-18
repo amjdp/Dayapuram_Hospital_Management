@@ -24,29 +24,43 @@
                     <h2>Add Department</h2>
 
                     <div style="display:flex;width:100%;">
-                        <form>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div style="width:100%;">
+
+                                {{status}}
+
                                 <p>Department</p>
-                                <select id="select">
-                                    <option value="opt1">Select Department</option>
-                                    <option value="opt2">Heart Care</option>
-                                    <option value="opt3">Women Care</option>
-                                    <option value="opt4">Child Care</option>
-                                    <option value="opt5">Neuroscience</option>
-                                    <option value="opt6">Liver & gastro science</option>
-                                    <option value="opt7">Orthopedics</option>
-                                    <option value="opt8">Renal Care</option>
-                                    <option value="opt9">Radiology</option>
+                                <select id="select" name="dept">
+                                    <option >Select Department</option>
+                                    <option value="Heart Care">Heart Care</option>
+                                    <option value="Women Care">Women Care</option>
+                                    <option value="Child Care">Child Care</option>
+                                    <option value="Neuroscience">Neuroscience</option>
+                                    <option value="Liver & gastro science">Liver & gastro science</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Renal Care">Renal Care</option>
+                                    <option value="Endocrine sciences">Endocrine sciences</option>
+                                    <option value="Psychiatry">Psychiatry</option>
+                                    <option value="Oncology">Oncology</option>
+                                    <option value="Anaesthesiology">Anaesthesiology</option>
+                                    <option value="Radiology">Radiology</option>
+                                    <option value="Dermatology">Dermatology</option>
+                                    <option value="Blood Bank">Blood Bank</option>
                                 </select>
                             </div> 
                             <div style="width:100%;">
                                 <p>Description</p>
-                                <input name="id">
+                                <textarea name="desc" id="" cols="60" rows="10"></textarea>
+                            </div>
+                            <div style="width:100%;">
+                                <p>Upload Photo</p>
+                                <input type="file" id="dept_img" name="dept_photo">
                             </div>
                             <p>
-                                <a>SUBMIT</a>
+                                <button type="submit">SUBMIT</button>
                             </p>
-
+                           
                         </form>
                     </div>
 

@@ -58,5 +58,47 @@ def login_b(request):
 def login(request):
     return render(request,'common/login.html')
 
+def heartcare(request):
+    return render(request,'common/heartcare.html')     
+
+def womencare(request):
+    return render(request,'common/womencare.html')      
+
+def childcare(request):
+    return render(request,'common/childcare.html')   
+
+def neuroscience(request):
+    return render(request,'common/neuroscience.html')    
+
+def liver(request):
+    return render(request,'common/liver.html')  
+
+def orthopaedics(request):
+    return render(request,'common/orthopaedics.html')   
+
+def renalcare(request):
+    return render(request,'common/renalcare.html')  
+
+def endocrine(request):
+    return render(request,'common/endocrine.html')    
+
+def psychiatry(request):
+    return render(request,'common/psychiatry.html')       
+
+def oncology(request):
+    return render(request,'common/oncology.html')         
+
+def anaesthesiology(request):
+    return render(request,'common/anaesthesiology.html')    
+
+def radiology(request):
+    return render(request,'common/radiology.html')    
+
+def dermatology(request):
+    return render(request,'common/dermatology.html')   
+
+def bloodbank(request):
+    return render(request,'common/bloodbank.html')
+
 def demo(request):
     return render(request,'common/demo-dept.html')

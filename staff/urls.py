@@ -7,5 +7,6 @@ urlpatterns = [
     path('my-home/', views.staff_home, name='home'),
     path('registration/', views.regn, name='reg'),
     path('appointments/', views.app, name='app-list'),
-    path('patients/', views.pt_search, name='search')     
+    path('patients/', views.pt_search, name='search')
+    # path('patients/', views.pt_search, name='search')      
 ]

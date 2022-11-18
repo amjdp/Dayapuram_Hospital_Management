@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . models import AdminLogin
+from . models import AdminLogin, Department
 
 # Create your views here.
 
@@ -36,11 +36,31 @@ def add_dr(request):
 def add_pt(request):
     return render(request,'hms_admin/add_patient.html')
 
-def view_pt(request):
+def view_patient(request):
     return render(request,'hms_admin/view_patient.html')
 
-def add_dt(request):
-    return render(request,'hms_admin/add_dept.html')
+def add_department(request):
+    msg = ""
+    if request.method == 'POST':
+        dept_name = request.POST['dept']
+        dept_description = request.POST['desc']
+        dept_photo = request.POST['dept_photo']
+
+        dept_exist = Department.objects.filter(department_name = dept_name).exists()
+        if not dept_exist:
+            add_department = Department(
+                department_name = dept_name,
+                department_description = dept_description,
+                department_image = dept_photo,
+                )
+            admin_id = request.session['admin_id']
+
+            add_department.save()
+            msg = "Department successfully added"
+        else:
+            msg = "Department already exists"
+
+    return render(request,'hms_admin/add_dept.html',{'status':msg})
 
 def view_dt(request):
     return render(request,'hms_admin/view_dept.html')

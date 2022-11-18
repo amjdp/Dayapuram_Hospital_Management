@@ -2,135 +2,18 @@
 {% load static %}
 
 {% block header %}
-<style>
-	/* Search bar  */
-	form {
-		outline: 0;
-		float: left;
-		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-		-webkit-border-radius: 4px;
-		border-radius: 4px;
-	}
 
-	form>.textbox {
-		outline: 0;
-		height: 42px;
-		width: 500px;
-		line-height: 42px;
-		padding: 0 16px;
-		background-color: rgba(255, 255, 255, 0.8);
-		color: #212121;
-		border: 0;
-		float: left;
-		-webkit-border-radius: 4px 0 0 4px;
-		border-radius: 4px 0 0 4px;
-	}
-
-	form>.textbox:focus {
-		outline: 0;
-		background-color: #FFF;
-	}
-
-	form>.button {
-		outline: 0;
-		background: none;
-		background-color: rgba(38, 50, 56, 0.8);
-		float: left;
-		height: 42px;
-		width: 42px;
-		text-align: center;
-		line-height: 42px;
-		border: 0;
-		color: #FFF;
-		font: normal normal normal 14px/1 FontAwesome;
-		font-size: 16px;
-		text-rendering: auto;
-		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-		-webkit-transition: background-color .4s ease;
-		transition: background-color .4s ease;
-		-webkit-border-radius: 0 4px 4px 0;
-		border-radius: 0 4px 4px 0;
-	}
-
-	form>.button:hover {
-		background-color: rgba(0, 150, 136, 0.8);
-	}
-
-	/* departments */
-
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	body {
-		font: 14px/1 'Open Sans', sans-serif;
-		color: #555;
-		background: #fff;
-	}
-
-	.gallery {
-		width: 100%;
-		padding: 50px;
-		margin: 0 auto;
-		/* padding: 5px; */
-		background: #fff;
-		/* box-shadow: 0 1px 2px rgba(0, 0, 0, .3); */
-	}
-
-	.gallery>div {
-		position: relative;
-		float: left;
-		padding: 20px;
-	}
-
-	.gallery>div>img {
-		display: block;
-		height: 200px;
-		width: 200px;
-		transition: .1s transform;
-		transform: translateZ(0);
-		/* hack */
-	}
-
-	.gallery>div:hover {
-		z-index: 1;
-	}
-
-	.gallery>div:hover>img {
-		transform: scale(1.7, 1.7);
-		transition: .3s transform;
-	}
-
-	.cf:before,
-	.cf:after {
-		display: table;
-		content: "";
-		line-height: 0;
-	}
-
-	.cf:after {
-		clear: both;
-	}
-
-
-</style>
 {% endblock %}
 
 
 {% block content %}
 
-<section class="page-title bg-3">
+<section class="page-title bg-1">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="block text-center">
-					<!-- <span class="text-white">All Department</span> -->
 					<h1 class="text-capitalize mb-5 text-lg">Departments</h1>
 				</div>
 			</div>
@@ -139,55 +22,186 @@
 </section>
 
 
-<section class="section service-2 dept">
+<section class="section service-2">
 	<div class="container">
-
-		<div class="gallery cf">
-			<div>
-				<img src="{% static 'images/dept/cardiology.jpg' %}" />
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
 			</div>
-			<div>
-				<img src="{% static 'images/dept/pregnancy-1.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/paediatrics-img.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/neuro.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/gastro.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/ortho.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/renal.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/endocrine-1.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/psy.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/oncology.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/anesthesiology.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/Radiology.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/dermatology.jpg' %}" />
-			</div>
-			<div>
-				<img src="{% static 'images/dept/blood2.jpg' %}" />
-			</div>
-
 		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6 ">
+				<div class="department-block mb-5">
+				<a href="{% url 'common:heart' %}">	<img src="{% static 'images/dept/cardiology.jpg' %}" alt="" width="350px" height="250px"> </a>
+					<div class="content">
+                     
+					<a href="{% url 'common:heart' %}">	<h4 class="mt-4 mb-2 title-color">Heart Care</h4> </a>
+						<p class="mb-4">The Heaven Hospital Department of Cardiology offers the latest innovations in invasive and noninvasive heart care to patients of all ages.</p>
+						<a href="{% url 'common:heart' %}" class="read-more">Learn More  <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/pregnancy-1.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2  title-color">Women Care</h4>
+						<p class="mb-4">Our team of Obstetrics and gynaecologists at the department provide comprehensive treatment.</p>
+						<a href="womencare" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/paediatrics-img.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Child Care</h4>
+						<p class="mb-4">Heaven offers best care available in modern pediatric medicine, delivered in its state of the art facilities.</p>
+						<a href="childcare" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+<br><br>
+
+			<div class="col-lg-4 col-md-6 ">
+				<div class="department-block  mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/neuro.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Neuro Science</h4>
+						<p class="mb-4">The Institute of Neuro Sciences at Heaven is a Centre of Excellence that focuses on providing comprehensive brain, spine and nerve care.</p>
+						<a href="neuroscience" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/gastro.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Liver and Gastro Science</h4>
+						<p class="mb-4">Our Institute of Liver and Gastro Sciences is fully equipped for managing conditions pertaining to Digestive & Hepatobiliary diseases.</p>
+						<a href="liver" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/ortho.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Orthopaedics</h4>
+						<p class="mb-4">The department of orthopaedics with international facilities and skilled experts’ guidance assure optimal medical.</p>
+						<a href="orthopaedics" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br><br>
+	
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6 ">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/renal.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Renal Care</h4>
+						<p class="mb-4">The center of excellence for Nephrology and Urology at Heaven is equipped with state of the art technical support and is dedicated to providing the best of care to patients.</p>
+						<a href="renalcare" class="read-more">Learn More  <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/endocrine-1.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2  title-color">Endocrine Science</h4>
+						<p class="mb-4">The department of Endocrinology at Heaven is committed to providing comprehensive care to patients with hormonal and metabolism conditions.</p>
+						<a href="endocrine" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/psy.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Psychiatry</h4>
+						<p class="mb-4">The Heaven Psychiatry Department imparts comprehensive and compassionate patient care while dealing with child, adolescent, adult, and geriatric mental health.</p>
+						<a href="psychiarty" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+<br><br>
+
+			<div class="col-lg-4 col-md-6 ">
+				<div class="department-block  mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/oncology.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Oncology</h4>
+						<p class="mb-4">From diagnosis to treating cancer and even managing certain cancer-related symptoms, surgery plays a crucial role.</p>
+						<a href="oncology" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/anesth.webp' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Anaesthesiology</h4>
+						<p class="mb-4">The department of anaesthesiology is the backbone of surgery, and we at Heaven have taken care to keep pace with the advancement.</p>
+						<a href="anaesthesiology" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5 mb-lg-0">
+					<img src="{% static 'images/dept/Radiology.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Radiology</h4>
+						<p class="mb-4">The Institute of Radiology and Imaging Sciences department in Heaven is one of the most state-of-the-art facilities in the entire country </p>
+						<a href="radiology" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<br><br>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 ">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/dermatology.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Dermatology</h4>
+						<p class="mb-4">Heaven has a dedicated team of specialist headed by senior dermatologists to ensure the health of your skin. </p>
+						<a href="dermatology" class="read-more">Learn More  <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="department-block mb-5">
+					<img src="{% static 'images/dept/blood2.jpg' %}" alt="" width="350px" height="250px">
+					<div class="content">
+						<h4 class="mt-4 mb-2  title-color">Blood Bank</h4>
+						<p class="mb-4">A blood bank is a center where blood gathered as a result of blood donation is stored and preserved for later use in blood transfusion. </p>
+						<a href="bloodbank" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+
+
 	</div>
 </section>
+
+
 
 {% endblock %}

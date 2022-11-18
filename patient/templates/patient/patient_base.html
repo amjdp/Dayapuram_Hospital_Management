@@ -159,6 +159,152 @@
                 </div>
             </div>
         </div>
+
+        <nav class="navbar navbar-expand-lg navigation" id="navbar">
+			<div class="container">
+				<a class="navbar-brand" href="">
+					<img src="{% static 'images/logo.png' %}" alt="" class="img-fluid">
+				</a>
+
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+					aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icofont-navigation-menu"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarmain">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="{% url 'patient:phome' %}">Home</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="{% url 'patient:bookings' %}">My Bookings</a>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="" id="dropdown03" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"> Profile <i
+									class="icofont-thin-down"></i></a>
+							<ul class="dropdown-menu" aria-labelledby="dropdown03">
+								<li><a class="dropdown-item" href="{% url 'patient:my-pro' %}"> My Profile </a></li>
+								<li><a class="dropdown-item" href="{% url 'patient:chg-pwd' %}"> Change Password </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item"><a class="nav-link" id="myBtn" class="dropdown-item"
+								href="#myModal">Doctors</a>
+						</li>
+
+						<!-- <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><a id="myBtn" class="dropdown-item"
+									href="#myModal"> Doctors</a> <i class="icofont-thin-down"></i></a> -->
+
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span class="close">&times;</span>
+								</div>
+								<div class="modal-body"> <br><br>
+									<div class="wrapper">
+										<div class="title-text">
+											<div class="title find">
+												Find Doctor
+											</div>
+										</div>
+										<div class="form-container">
+											<div class="form-inner">
+												<form action="#" class="find">
+													<!-- <div class="field">
+														<select>
+															<option>Select Doctors</option>
+															<option>Thomas Henry</option>
+															<option>Harrision Samuel</option>
+															<option>Alexandar James</option>
+															<option>Edward john</option>
+															<option>Henry Samuel</option>
+															<option>Thomas Alexander</option>
+															<option>Harisson Thomas</option>
+															<option>Jonas Thomson</option>
+															<option>Henry Forth</option>
+														</select>
+													</div> -->
+													<div class="field">
+														<select>
+															<option>Select Department</option>
+															<option>Heart Centre</option>
+															<option>Neuro Science</option>
+															<option>Liver and gastro science</option>
+															<option>Women Care</option>
+															<option>Child Care</option>
+															<option> orthopaedics</option>
+															<option> Renal Care</option>
+															<option> pulmonology</option>
+															<option> Endocrine sciences</option>
+															<option> opthalmology</option>
+															<option>Dental Care</option>
+															<option> Surgical oncology</option>
+															<option> psycyhiatry </option>
+															<option> Anaesthesiology</option>
+															<option> Dermatology</option>
+															<option> Radiology</option>
+														</select>
+													</div>
+													<div class="field btn">
+														<div></div>
+														<!-- <input type="submit" value="Signup"> -->
+														<a class="btn btn-primary"
+															href="{% url 'common:dept-single' %}"> Find
+														</a>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div> <br>
+								</div>
+								<div class="modal-footer"><br>
+								</div>
+							</div>
+							<!-- Modal content end -->
+						</div>
+						<!-- Modal end -->
+						<!-- </li> -->
+
+						<li class="nav-item active">
+							<a class="nav-link" href="{% url 'patient:appointment_1' %}">Appointment</a>
+						</li>
+
+						<!-- <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="{% url 'patient:appointment' %}" id="dropdown03"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Appointment <i
+									class="icofont-thin-down"></i></a>
+							<ul class="dropdown-menu" aria-labelledby="dropdown03">
+								<li><a class="dropdown-item" href="{% url 'patient:appointment' %}"> Book an appointment
+									</a></li>
+							</ul>
+						</li> -->
+
+						<!-- <li class="nav-item active">
+							<a class="nav-link" href="{% url 'patient:prescriptions' %}">Prescriptions</a>
+						</li> -->
+
+						<li class="nav-item active">
+							<a class="nav-link" href="{% url 'common:com-home' %}"> <span
+									class="material-symbols-rounded">
+									logout
+								</span> </a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+
         {% block content %}
 
         {% endblock %}
