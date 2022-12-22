@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . models import AdminLogin, Department
+from . models import AdminLogin, Department, Doctor
 
 # Create your views here.
 
@@ -22,16 +22,48 @@ def view_app(request):
     return render(request,'hms_admin/view_appointments.html')
 
 def add_dr(request):
-    return render(request,'hms_admin/add_doctor.html')
+    msg = ""
+    
+    department = Department.objects.all()
+
+    if request.method == 'POST':
+        dr_name = request.POST['doctor_name']
+        dr_email = request.POST['doctor_email']
+        dr_password = request.POST['doctor_password']
+        dr_number = request.POST['doctor_number']
+        dr_department = request.POST['doctor_dept']
+        dr_qualification = request.POST['qualification']
+        dr_experience = request.POST['experience']
+        dr_fees = request.POST['fees']
+        dr_profile_photo = request.FILES['doctor_photo']
+      
+        # doctor_exist = Doctor.objects.filter(doctor_name = dr_name).exists()
+        # if not doctor_exist:
+        add_doctor = Doctor(
+            doctor_name = dr_name,
+            doctor_email = dr_email, 
+            doctor_password = dr_password,
+            doctor_contact_no = dr_number,
+            doctor_qualification = dr_qualification,
+            doctor_experience = dr_experience,
+            consultation_fees = dr_fees,
+            doctor_profile_picture = dr_profile_photo,
+            doctor_department_id_id = dr_department,                
+        )
+            # admin_id = request.session['admin_id']
+
+        add_doctor.save()
+        msg = "Doctor successfully added"
+    # else:
+    #     msg = "Doctor already exists"
+
+    return render(request,'hms_admin/add_doctor.html',{'status':msg,'dept':department})
 
 def view_dr(request):
     return render(request,'hms_admin/view_doctor.html')
 
 def view_report(request):
     return render(request,'hms_admin/view_report.html')
-
-def add_dr(request):
-    return render(request,'hms_admin/add_doctor.html')
 
 def add_pt(request):
     return render(request,'hms_admin/add_patient.html')
@@ -44,7 +76,7 @@ def add_department(request):
     if request.method == 'POST':
         dept_name = request.POST['dept']
         dept_description = request.POST['desc']
-        dept_photo = request.POST['dept_photo']
+        dept_photo = request.FILES['dept_photo']
 
         dept_exist = Department.objects.filter(department_name = dept_name).exists()
         if not dept_exist:

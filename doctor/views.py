@@ -7,6 +7,9 @@ def dr_home(request):
 def dr_profile(request):
     return render(request,'doctor/dr_profile.html')
 
+def edit_dr_profile(request):
+    return render(request,'doctor/edit_profile.html')
+
 def dr_patient(request):
     return render(request,'doctor/patient.html')
 

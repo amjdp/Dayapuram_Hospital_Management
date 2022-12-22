@@ -1,32 +1,107 @@
-{% extends 'staff/staff_home.html' %}
-{% load static %}
+{% extends 'staff/staff_masterpage.html' %} 
+{% load static %} 
 
 {% block header %}
 
-<link rel="stylesheet" href="{% static 'assets/css/patient_search.css' %}" />
+<!-- <link rel="stylesheet" href="{% static 'assets/css/patient_search.css' %}" /> -->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style>
-  /* .section .container{
-    background-color: blue;
-  } */
+	* {
+		box-sizing: border-box;
+	}
+
+	/* .pt_container {
+		background-color: aqua;
+		width: 1000px;
+		margin-left: 20px;
+	} */
+
+	#myInput {
+		background-image: url('/css/searchicon.png');
+		background-position: 10px 12px;
+		background-repeat: no-repeat;
+		width: 100%;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 1px solid #ddd;
+		margin-bottom: 12px;
+	}
+
+	#myUL {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#myUL li a {
+		border: 1px solid #ddd;
+		margin-top: -1px;
+		/* Prevent double borders */
+		background-color: #f6f6f6;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px;
+		color: black;
+		display: block
+	}
+
+	#myUL li a:hover:not(.header) {
+		background-color: #eee;
+	}
+
+	.container-fluid{
+		min-height: 800px;
+		width: 80%;
+	}
 </style>
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
-
-{% endblock %}
+{% endblock %} 
 
 {% block content %}
 
-<section class="section">
-  <div class="container">
-    <div class="row abc">
-	    <div class="col-12">
+<div class="container-fluid">
+	
+	<h2>Patients List</h2>
 
-        
-      </div>      
-    </div>
-  </div>
-</section>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" />
+
+	<ul id="myUL">
+		<li><a href="#">Adele</a></li>
+		<li><a href="#">Agnes</a></li>
+
+		<li><a href="#">Billy</a></li>
+		<li><a href="#">Bob</a></li>
+
+		<li><a href="#">Calvin</a></li>
+		<li><a href="#">Christina</a></li>
+		<li><a href="#">Cindy</a></li>
+	</ul>
+</div>
+
+
+
+	<script>
+		function myFunction() {
+			var input, filter, ul, li, a, i, txtValue;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("myUL");
+			li = ul.getElementsByTagName("li");
+			for (i = 0; i < li.length; i++) {
+				a = li[i].getElementsByTagName("a")[0];
+				txtValue = a.textContent || a.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+
 
 {% endblock %}

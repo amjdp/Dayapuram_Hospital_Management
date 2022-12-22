@@ -21,13 +21,12 @@
         {% csrf_token %}
 
         <p>Login</p>
-        <label for="email" class="label">Email</label><br />
+
+        <label for="email" class="label mt-5">Email</label><br />
         <input type="text" id="admin_email" name="admin_email" required /><br />
         <label for="password" class="label">Password</label><br />
         <input type="password" id="admin_password" name="admin_password" /><br /><br />
-        <!-- <label for="remember" class="remember"> Remember me </label>
-        <input type="checkbox" id="remember" name="Remember" /> -->
-          <button type="submit" >Login</button>
+        <button type="submit" class="btn btn-primary" >Login</button>
 
           {{invalid_data}}
       </form>

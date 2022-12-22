@@ -2,6 +2,25 @@
 {% load static %}
 
 {% block header %}
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
+  rel="stylesheet"
+/>
+
+<script src=" {% static 'js/doctor_cards.js' %}"></script>
+
+
+<link rel="stylesheet" href="{% static 'css/doctor_cards.css' %}" />
+
+<style>
+
+</style>
+
+<script>
+
+</script>
+
 {% endblock %}
 
 {% block content %}
@@ -38,7 +57,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-lg-10">
 				<div class="department-content mt-5">
 					<h3 class="text-md">Medecine and Health</h3>
 					<div class="divider my-4"></div>
@@ -51,7 +70,7 @@
 						corporis nesciunt tempore vero voluptas. Tempore.</p>
 
 
-					<h3 class="mt-5 mb-4">Services features</h3>
+					<!-- <h3 class="mt-5 mb-4">Services features</h3>
 					<div class="divider my-4"></div>
 					<ul class="list-unstyled department-service">
 						<li><i class="icofont-check mr-2"></i>International Drug Database</li>
@@ -63,11 +82,11 @@
 					</ul>
 
 					<a href="" class="btn btn-main-2 btn-round-full">Make an Appoinment<i
-							class="icofont-simple-right ml-2  "></i></a>
+							class="icofont-simple-right ml-2  "></i></a> -->
 				</div>
 			</div>
 
-			<div class="col-lg-4">
+			<!-- <div class="col-lg-4">
 				<div class="sidebar-widget schedule-widget mt-5">
 					<h5 class="mb-4">Time Schedule</h5>
 
@@ -91,9 +110,74 @@
 						<h3>+23-4565-65768</h3>
 					</div>
 				</div>
+			</div> -->
+
+		</div>
+	</div>
+
+</section>
+
+
+<section class="section team">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h3 class="text-md" style="align-content: left;">Our Doctors</h3>
+					<div class="divider mx-auto my-4"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{% static 'images/team/1.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="{% url 'common:dr-1' %}">John Marshal</a></h4>
+						<p>Internist, Emergency Physician</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{% static 'images/team/2.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="{% url 'common:dr-2' %}">Marshal Root</a></h4>
+						<p>Surgeon, Сardiologist</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block mb-5 mb-lg-0">
+					<img src="{% static 'images/team/3.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="{% url 'common:dr-3' %}">Siamon John</a></h4>
+						<p>Internist, General Practitioner</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="team-block">
+					<img src="{% static 'images/team/4.jpg' %}" alt="" class="img-fluid w-100">
+
+					<div class="content">
+						<h4 class="mt-4 mb-0"><a href="{% url 'common:dr-4' %}">Rishat Ahmed</a></h4>
+						<p>Orthopedic Surgeon</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
+
+
+
 {% endblock %}
+

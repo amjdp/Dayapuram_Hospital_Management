@@ -1,4 +1,4 @@
-{% extends 'staff/rec_home.html' %}
+{% extends 'staff/staff_masterpage.html' %}
 {% load static %}
 
 {% block header %}
@@ -10,11 +10,7 @@
 
 {% block content %}
 
-
-
-
-
-<section class="h-100 bg-dark">
+<section class="h-100" style=" background: #223a66;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
@@ -33,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="form3Example1m">First name</label>
+                                            <label class="form-label" for="form3Example1m">Name</label>
                                             <input type="text" id="form3Example1m"
                                                 class="form-control form-control-lg" />
 
@@ -41,7 +37,7 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="form3Example1n">Last name</label>
+                                            <label class="form-label" for="form3Example1n">Age</label>
                                             <input type="text" id="form3Example1n"
                                                 class="form-control form-control-lg" />
 
@@ -53,14 +49,14 @@
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
 
-                                            <label class="form-label" for="form3Example1m1">Age</label>
+                                            <label class="form-label" for="form3Example1m1">Date of Birth</label>
                                             <input type="text" id="form3Example1m1"
                                                 class="form-control form-control-lg" />
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="form3Example1n1"> BLood Group </label>
+                                            <label class="form-label" for="form3Example1n1"> Blood Group </label>
                                             <input type="text" id="form3Example1n1"
                                                 class="form-control form-control-lg" />
                                           
@@ -89,31 +85,7 @@
                                             id="otherGender" value="option3" />
                                         <label class="form-check-label" for="otherGender">Other</label>
                                     </div>
-
                                 </div>
-
-                                <!-- <div class="row">
-                    <div class="col-md-6 mb-4">
-  
-                      <select class="select">
-                        <option value="1">State</option>
-                        <option value="2">Option 1</option>
-                        <option value="3">Option 2</option>
-                        <option value="4">Option 3</option>
-                      </select>
-  
-                    </div>
-                    <div class="col-md-6 mb-4">
-  
-                      <select class="select">
-                        <option value="1">City</option>
-                        <option value="2">Option 1</option>
-                        <option value="3">Option 2</option>
-                        <option value="4">Option 3</option>
-                      </select>
-  
-                    </div>
-                  </div> -->
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example9">Contact No</label>
@@ -123,27 +95,13 @@
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example8">Address</label> <br>
-                                    <textarea name="" id="" cols="52" rows="5"></textarea>
-
-                                    <!-- <input type="text" id="form3Example8" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example8">Address</label> -->
+                                    <textarea class="form-control form-control-lg" name="" id="" cols="52" rows="5"></textarea>
                                 </div>
-
-                                <!-- <div class="form-outline mb-4">
-                    <input type="text" id="form3Example90" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example90">Pincode</label>
-                  </div> -->
-
-
-
-                                <!-- <div class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example97">Email ID</label>
-                  </div> -->
+                   
 
                                 <div class="d-flex justify-content-end pt-3">
                                     <button type="button" class="btn btn-light btn-lg">Reset all</button>
-                                    <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    <button type="submit" class="btn btn-primary btn-lg ms-2">Submit form</button>
                                 </div>
 
                             </div>
@@ -154,118 +112,5 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="contact-block mb-4 mb-lg-0">
-                   
-</div> -->
-
-
-<!-- Register Form -->
-<!-- <div class="form-wrapper"> -->
-<!-- Form-wrapper only for positioning -->
-<!-- <form action="#non" method="post" class="fcorn-register container">
-        <p class="register-info">Note: All fields are required.</p>
-        <div class="row">
-            <p class="col-md-6"><input type="text" placeholder="First Name" required></p>
-            <p class="col-md-6"><input type="text" placeholder="Last Name" required></p>
-        </div>
-        <p><input type="email" placeholder="Email Address" required> <br>
-            <span class="extern-type">We'll keep this private.</span>
-        </p>
-        <p><input type="password" placeholder="Password" required> <br>
-            <span class="extern-type">Atleast 8 characters long.</span>
-        </p>
-        <p><input type="password" placeholder="Verify Password" required></p>
-        <div class="row">
-            <p class="col-md-4"><input type="text" placeholder="Date (dd)" required></p>
-            <p class="col-md-4"><input type="text" placeholder="Month (mm)" required></p>
-            <p class="col-md-4"><input type="text" placeholder="Year (yyyy)" required></p>
-            <p class="col-md-12">
-                <input type="text" placeholder="Membership code"> <br>
-                <span class="extern-type"> Enter your membership code, if you do not have one, leave it blank.</span>
-            </p>
-        </div>
-        <div class="row">
-            <p class="col-md-6 city-wrap">
-                <select>
-                    <option value="0" selected disabled>City</option>
-                    <option value="1">San José</option>
-                </select>
-            </p>
-            <p class="col-md-6 country-wrap"> -->
-<!-- Add more country name -->
-<!-- <select>
-                    <option value="0" selected disabled>Country</option>
-                    <option value="1">U.S. Only</option>
-                    <option value="2">Outside U.S.</option>
-                </select>
-            </p> 
-            <div>
-                <p class="col-xs-12">
-                <form action="upload.php" method="post" enctype="multipart/form-data">
-                    Upload your personal photo:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit" required>
-                    </p>
-            </div>
-            <br />
-            <br>
-            <p class="register-toggle">
-                <label for="register-agree" class="toggle-label" data-on="YES" data-off="NO">
-                    <br><br>
-                    <input type="checkbox" id="register-agree" class="toggle-input">
-                    <span class="toggle-handle"></span>
-                </label> 
-                <span class="info">Do you agree to the <a href="#">terms and conditions?</a></span>
-            </p>
-            <br><br>
-            <p class="register-submit"><input type="submit" value="Register Now"></p>
-    </form>
-</div> -->
-
-
-<!-- <div class="row">
-    <div class="col-lg-4">
-        <div class="block text-center">
-
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
-
 
 {% endblock %}

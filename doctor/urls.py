@@ -5,7 +5,8 @@ app_name = 'doctor'
 
 urlpatterns = [
     path('my-home/', views.dr_home, name='dr-home'), 
-    path('profile/', views.dr_profile, name='dr-pro'),
+    path('dr-profile/', views.dr_profile, name='dr-pro'),
+    path('edit-dr-profile/', views.edit_dr_profile, name='edit-pro'),
     path('patient/', views.dr_patient, name='dr-patient'),
     path('appointment/', views.my_appointments, name='my-appoint'),
     path('prescription/',views.prescription,name='prescrip'),

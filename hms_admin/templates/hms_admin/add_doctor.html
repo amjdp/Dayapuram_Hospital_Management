@@ -21,66 +21,67 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div>
-                    <h2 class="text-center mb-3">Add New Doctor</h2>
+                    <h2 class="text-center mb-3">Add Doctor</h2>
 
 
                     <div style="display:flex;width:100%;">
-                        <form>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+
                             <div style="width:100%;">
-                                <p>Name</p>
-                                <input name="doctor_name" autofocus>
+
+                                {{status}}
+
+
+                              <label>Name</label>
+                                <input name="doctor_name" autofocus type="text">
                             </div>
 
                             <div style="width:100%;">
-                                <p>Email ID</p>
-                                <input name="doctor_email">
+                                <label>Email ID</label>
+                                <input name="doctor_email" type="email">
                             </div>
 
                             <div style="width:100%;">
-                                <p>Password</p>
-                                <input name="doctor_password">
+                                <label>Password</label>
+                                <input name="doctor_password" type="password">
                             </div>
 
                             <div style="width:100%;">
-                                <p>Mobile Number</p>
-                                <input name="doctor_number">
+                                <label>Contact Number</label>
+                                <input name="doctor_number" type="text">
                             </div>
 
                             <div style="width:100%;">
-                                <p>Department</p>
-                                <select id="select">
-                                    <option value="opt1">Select Department</option>
-                                    <option value="opt2">Heart Care</option>
-                                    <option value="opt3">Women Care</option>
-                                    <option value="opt4">Child Care</option>
-                                    <option value="opt5">Neuroscience</option>
-                                    <option value="opt6">Liver & gastro science</option>
-                                    <option value="opt7">Orthopedics</option>
-                                    <option value="opt8">Renal Care</option>
-                                    <option value="opt9">Radiology</option>
+                                <label>Department</label>                            
+                                <select id="select" name="doctor_dept">
+                                    <option value="" selected disabled>Select Department</option>
+                                    {% for dept in department %}
+                                    <option value="{{dept.id}}">{{dept.department_name}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>                     
 
                             <div style="width:100%;">
-                                <p>Qualification</p>
-                                <input name="phone">
+                                <label>Qualification</label>
+                                <input name="qualification" type="text">
                             </div>
                             <div style="width:100%;">
-                                <p>Experience</p>
-                                <input name="phone">
+                                <label>Experience</label>
+                                <input name="experience" type="number">
                             </div>
                             <div style="width:40%;">
-                                <p>Consultancy Charge</p>
-                                <input name="phone">
+                                <label>Consultancy Fee</label>
+                                <input name="fees">
                             </div>
                             <div style="width:50%; padding-left: 10%;">
-                                <p>Upload Photo</p>
-                                <input type="file" id="dr_img" name="dr_photo">
+                                <label>Upload Photo</label>
+                                <input type="file" id="doctor_img" name="doctor_photo">
                             </div>
 
-                            <p>
-                                <a>SUBMIT</a>
-                            </p>
+                          
+                                <button > SUBMIT </button>
+                            
 
                         </form>
                     </div>

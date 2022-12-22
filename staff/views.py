@@ -12,3 +12,9 @@ def app(request):
 
 def pt_search(request):
     return render(request,'staff/patient_search.html')
+
+def filter(request):
+    return render(request,'staff/filter.html')
+    
+def staff_list(request):
+    return render(request,'staff/staff.html')
