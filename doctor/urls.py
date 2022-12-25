@@ -7,11 +7,7 @@ urlpatterns = [
     path('my-home/', views.dr_home, name='dr-home'), 
     path('dr-profile/', views.dr_profile, name='dr-pro'),
     path('edit-dr-profile/', views.edit_dr_profile, name='edit-pro'),
-    path('patient/', views.dr_patient, name='dr-patient'),
-    path('appointment/', views.my_appointments, name='my-appoint'),
-    path('prescription/',views.prescription,name='prescrip'),
-    path('schedule/',views.schedule,name='schedule'),
-    path('holiday/',views.holiday,name='holiday'),
-    path('dr_login/',views.dr_login,name='dr_login'),
+    path('appointments/', views.my_appointments, name='my-appointments'),
+    path('patients/',views.patient_search,name='search-pt'),
     path('change_password/',views.chg_pwd,name='chg-pwd')
 ]

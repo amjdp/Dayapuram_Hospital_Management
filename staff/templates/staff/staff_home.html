@@ -1,96 +1,146 @@
 {% extends 'staff/staff_masterpage.html' %}
-{% load static %}
+{% load static %} 
 
-    {% block header %}
-    <!-- Add style tag for individual pages  -->
-    {% endblock %}
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/st_home.css' %}">
+{% endblock %} 
 
-    {% block content %}
+{% block content %}
 
-    <section>
-        <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-category-5">
-                        <!-- <div class="category-name">Personal Cards</div> <br/><br/> -->
-                        <ul class="all-pr-cards">
-                            <li>
-                                <div class="per-card-3">
-                                    <div class="card-image">
-                                        <span></span>
-                                        <img src="{% static
-                                                'assets/img/calendar.png' %}" class="logo" />
-                                    </div>
-
-                                    <div class="card-content">
-                                        <span class="per-position"><br /><br />TOTAL APPOINTMENTS</span>
-                                        <div class="social-icons">
-                                            <i class="fa-solid fa-7" style="font-style: #fff">0</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="per-card-3">
-                                    <div class="card-image">
-                                        <span></span>
-                                        <img src="{% static 'images/pt.png'
-                                                %}" class="logo" />
-                                    </div>
-
-                                    <div class="card-content">
-                                        <span class="per-position"><br /><br />TOTAL PATIENTS</span>
-                                        <div class="social-icons">
-                                            <i class="fa-solid fa-7" style="font-style: #fff">0</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+<section>
+    <div>
+        <div class="carousel">
+            <ul class="slides">
+                <input type="radio" name="radio-buttons" id="img-1" checked />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img
+                            src="{% static 'images/img1.jpg' %}" />
                     </div>
-
-                    <div class="card-category-5">
-                        <!-- <div class="category-name">Personal Cards</div> <br/><br/> -->
-                        <ul class="all-pr-cards">
-                            <li>
-                                <div class="per-card-3">
-                                    <div class="card-image">
-                                        <span></span>
-                                        <img src="{% static
-                                                'assets/img/images.png' %}" class="logo" />
-                                    </div>
-
-                                    <div class="card-content">
-                                        <span class="per-position"><br /><br />DEPARTMENTS</span>
-                                        <div class="social-icons">
-                                            <i class="fa-solid fa-7" style="font-style: #fff"><br /><br /><br />0</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="per-card-3">
-                                    <div class="card-image">
-                                        <span></span>
-                                        <img src="{% static 'images/pt.png'
-                                                %}" class="logo" />
-                                    </div>
-
-                                    <div class="card-content">
-                                        <span class="per-position"><br /><br />PATIENTS LIST</span>
-                                        <div class="social-icons">
-                                            <i class="fa-solid fa-7" style="font-style: #fff"><br /><br /><br />0</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="carousel-controls">
+                        <label for="img-8" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-2" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
                     </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-2" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img
+                            src="{% static 'images/img2.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-3" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img3.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-2" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-4" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-4" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img4.webp' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-5" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-5" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img5.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-4" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-6" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-6" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img6.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-5" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-7" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-7" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img7.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-6" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-8" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <input type="radio" name="radio-buttons" id="img-8" />
+                <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="{% static 'images/img8.jpg' %}" />
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-7" class="prev-slide">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label for="img-1" class="next-slide">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                    <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+                    <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
+                    <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
+                    <label for="img-7" class="carousel-dot" id="img-dot-7"></label>
+                    <label for="img-8" class="carousel-dot" id="img-dot-8"></label>
                 </div>
-            </div>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    {% endblock %}
+   
+</section>
+
+{% endblock %}
+

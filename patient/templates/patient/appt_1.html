@@ -22,139 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <style>
-        .container-fluid {
-            margin-left: 10px;
-        }
-
-        #header_container {
-            background-color: #111194;
-            /* color: #ffffff; */
-            height: 80px;
-            width: 100%;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            padding-top: 16px;
-            font-size: 40px;
-        }
-
-        #image {
-            background-image: url("https://care.bestdocapp.com/_nuxt/img/web_banner.02626a5.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            width: 100%;
-            margin-top: 50px;
-        }
-
-        .select_tab {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            /* gap: 10px; */
-            /* background-color: #2196F3; */
-            padding: 10px;
-            height: 100px;
-            width: 100%;
-            margin-top: 50px;
-            margin-left: 20px;
-        }
-
-        .s-1 {
-            grid-area: 1/1/2/2;
-        }
-
-        .s-2 {
-            grid-area: 1/2/2/3;
-            width: 300px;
-        }
-
-        .s-3 {
-            grid-area: 1/3/2/4;
-            width: 300px;
-        }
-
-        .s-4 {
-            grid-area: 1/4/2/5;
-        }
-
-        .select_tab>div {
-            /* background-color: rgba(255, 255, 255, 0.8); */
-            /* border: 1px solid black; */
-            text-align: center;
-            font-size: 50px;
-        }
-
-        /* select {
-            width: 500px;
-            text-align: left;
-            border-radius: 6px;
-            border: 1px solid rgb(217, 214, 214);
-            background-color: #fff;
-            font-size: 45px;
-            font-weight: 300;
-            color: #8D8D8D;
-            margin-top: 16px;
-            padding: 10px;
-            -webkit-box-shadow: 0px 1px 1px #716f71;
-            -moz-box-shadow: 0px 1px 1px #716f71;
-            box-shadow: 0px 1px 1px #716f71;
-        } */
-
-
-        select {
-            font-size: 20px;
-            letter-spacing: 1px;
-            padding: 5px;
-            border: 0;
-            background: whitesmoke;
-            border-bottom: 1px solid silver;
-            width: 300px;
-            height: 50px;
-            color: gray;
-        }
-
-        /* select {
-            font-family: fontAwesome
-        } */
-
-        .next {
-            display: grid;
-            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-            /* gap: 10px; */
-            /* background-color: #2196F3; */
-            /* padding: 10px; */
-            height: 50px;
-            /* margin-top: 50px; */
-        }
-
-        .next>div {
-            text-align: center;
-            font-size: 50px;
-            margin-left: 50px;
-        }
-
-        .n-1 {
-            grid-area: 1/1/2/6;
-        }
-
-        .n-2 {
-            grid-area: 1/6/2/8;
-        }
-
-        .n-3 {
-            grid-area: 1/8/2/13;
-        }
-
-        button .nxt {
-            width: 50%;
-            font-size: medium;
-        }
-    </style>
-
+    <link rel="stylesheet" href="{% static 'css/appt_1.css' %}">
 
     {% block header %}
 
@@ -195,46 +63,39 @@
                 <div class="col-3 s-1"></div>
                 <div class="col-3 s-2">
                     <div>
-                        <select>
-                            <option>Select Department</option>
-                            <option>Heart Centre</option>
-                            <option>Neuro Science</option>
-                            <option>Liver and gastro science</option>
-                            <option>Women Care</option>
-                            <option>Child Care</option>
-                            <option> orthopaedics</option>
-                            <option> Renal Care</option>
-                            <option> pulmonology</option>
-                            <option> Endocrine sciences</option>
-                            <option> opthalmology</option>
-                            <option>Dental Care</option>
-                            <option> Surgical oncology</option>
-                            <option> psycyhiatry </option>
-                            <option> Anaesthesiology</option>
-                            <option> Dermatology</option>
-                            <option> Radiology</option>
+                        <select name="departments">
+                            <option disabled>Select Department</option>
+                            <option value="Heart Centre">Heart Centre</option>
+                            <option value="Neuro Science">Neuro Science</option>
+                            <option value="Liver and gastro science">Liver and gastro science</option>
+                            <option value="Women Care">Women Care</option>
+                            <option value="Child Care">Child Care</option>
+                            <option value="orthopaedics" value="">Orthopaedics</option>
+                            <option value="Heart Centre" value="">Renal Care</option>
+                            <option value="Renal Care" value="">pulmonology</option>
+                            <option value="Endocrine sciences" value="">Endocrine sciences</option>
+                            <option value="Opthalmology" value="">Opthalmology</option>
+                            <option value="Dental Care">Dental Care</option>
+                            <option value="Surgical oncology" value="">Surgical oncology</option>
+                            <option value=" Psycyhiatry " value="">Psycyhiatry </option>
+                            <option value=" Anaesthesiology" value="">Anaesthesiology</option>
+                            <option value=" Dermatology" value="">Dermatology</option>
+                            <option value=" Radiology" value="">Radiology</option>
+                            <option value=" Blood Bank" value="">Blood Bank</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-3 s-3">
                     <div>
-                        <select>
-                            <option>Select Doctor</option>
-                            <option value="">John Marshal</option>
-                            <option>Marshal Root</option>
-                            <option>Siamon John</option>
-                            <option>Rishat Ahmed</option>
-                            <option>John Marshal</option>
-                            <option>Marshal Root</option>
-                            <option>Siamon John</option>
-                            <option>Select Doctors</option>
-                            <option>John Marshal</option>
-                            <option>Marshal Root</option>
-                            <option>Siamon John</option>
-                            <option>Rishat Ahmed</option>
-                            <option>John Marshal</option>
-                            <option>Marshal Root</option>
-                            <option>Siamon John</option>
+                        <select name="doctors">
+                            <option disabled>Select Doctor</option>
+                            <option value="John Marshal">John Marshal</option>
+                            <option value="Marshal Root">Marshal Root</option>
+                            <option value="Siamon John">Siamon John</option>
+                            <option value="Rishat Ahmed">Rishat Ahmed</option>
+                            <option value="John Marshal">John Marshal</option>
+                            <option value="Marshal Root">Marshal Root</option>
+                            <option value="Siamon John">Siamon John</option>
                         </select>
                     </div>
                 </div>

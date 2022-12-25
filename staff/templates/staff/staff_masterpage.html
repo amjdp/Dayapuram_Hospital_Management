@@ -85,8 +85,7 @@
                 <div class="collapse navbar-collapse" id="navbarmain">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'staff:st-home'
-                                    %}">Home</a>
+                            <a class="nav-link" href="{% url 'staff:st-home' %}">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -104,7 +103,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'staff:app-list' %}">Staff</a>
+                            <a class="nav-link" href="{% url 'staff:staff-list' %}">Staff</a>
                         </li>
 
                         <li class="nav-item">
@@ -112,19 +111,39 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'staff:app-list' %}">Doctors</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'staff:app-list' %}">Appointments</a>
                         </li>
 
-                        <li class="nav-item active">
+
+                         <!-- Avatar -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                                    class="rounded-circle" height="50" alt="Avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- <li>
+                                    <a class="dropdown-item" href="{% url 'doctor:dr-pro' %}">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'doctor:chg-pwd' %}">Change Password</a>
+                                </li> -->
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'common:com-home' %}">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <!-- Logout  -->
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="{% url 'common:com-home' %}">
                                 <span class="material-symbols-rounded">
                                     logout </span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>

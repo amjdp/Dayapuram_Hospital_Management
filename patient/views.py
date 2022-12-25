@@ -4,14 +4,11 @@ from django.shortcuts import render
 def p_home(request):
     return render(request,'patient/patient_home.html')
 
-def appointment(request):
+def appointment(request): # old appointment
     return render(request,'patient/appointment.html')
 
-def confirmation(request):
+def confirmation(request): # old confirmation
     return render(request,'patient/confirmation.html')
-
-def online_booking(request):
-    return render(request,'patient/online_booking.html')
 
 def my_bookings(request):
     return render(request,'patient/my_bookings.html')
@@ -19,32 +16,17 @@ def my_bookings(request):
 def prescriptions(request):
     return render(request,'patient/prescriptions.html')
 
-def chpass(request):
-    return render(request,'patient/change-password.html')
-
-def pt_profile(request):
-    return render(request,'patient/patient_profile.html')
+def change_password(request):
+    return render(request,'patient/pt_change-password.html')
 
 def pt_profile(request):
     return render(request,'patient/pt-profile.html')
 
-def pt_login(request):
-    return render(request,'patient/pt_login.html')
-
-def reg(request):
+def register(request):
     return render(request,'patient/register.html')
-    
-def hello(request):
-    return render(request,'patient/hello.html')
-
-def app(request):
-    return render(request,'patient/appointment_new.html')
 
 def edit(request):
-    return render(request,'patient/edit_profile.html')
-
-def appt(request):
-    return render(request,'patient/new_appt.html')
+    return render(request,'patient/pt_edit_profile.html')
 
 def appt_1(request):
     return render(request,'patient/appt_1.html')
@@ -58,4 +40,6 @@ def appt_3(request):
 def appt_4(request):
     return render(request,'patient/appt_4.html')
 
+def appt_list(request):
+    return render(request,'patient/appointment_list.html')
     

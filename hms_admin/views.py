@@ -6,15 +6,6 @@ from . models import AdminLogin, Department, Doctor
 def admin_home(request):
     return render(request,'hms_admin/admin_home.html')
 
-def add_admin(request):
-    return render(request,'hms_admin/add_admin.html')
-
-def view_admin(request):
-    return render(request,'hms_admin/view_admin.html')
-
-def adm_prof(request):
-    return render(request,'hms_admin/admin_profile.html')
-
 def chg_pwd(request):
     return render(request,'hms_admin/change_password.html')
 
@@ -64,9 +55,6 @@ def view_dr(request):
 
 def view_report(request):
     return render(request,'hms_admin/view_report.html')
-
-def add_pt(request):
-    return render(request,'hms_admin/add_patient.html')
 
 def view_patient(request):
     return render(request,'hms_admin/view_patient.html')

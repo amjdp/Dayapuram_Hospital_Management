@@ -25,80 +25,19 @@ def login(request):
 def dept_single(request):
     return render(request,'common/department-single.html')
 
-def doc_1(request):
-    return render(request,'common/doctor_1.html')
+def doctor_single(request):
+    return render(request,'common/doctor_single.html')
 
-def doc_2(request):
-    return render(request,'common/doctor_2.html')
-
-def doc_3(request):
-    return render(request,'common/doctor_3.html')
-
-def doc_4(request):
-    return render(request,'common/doctor_4.html')
-
-def doc_5(request):
-    return render(request,'common/doctor_5.html')
-
-def doc(request):
+def doctor(request):
     return render(request,'common/hms_doctor.html')
 
-def documentation(request):
-    return render(request,'common/documentation.html')
-
-def blog_sidebar(request):
-    return render(request,'common/blog-sidebar.html')
-
-def blog_single(request):
-    return render(request,'common/blog-single.html')
-
-def login_b(request):
+def login_common(request):
     return render(request,'common/login_base.html')
-
-def login(request):
-    return render(request,'common/login.html')
 
 def heartcare(request):
     return render(request,'common/heartcare.html')     
+ 
 
-def womencare(request):
-    return render(request,'common/womencare.html')      
 
-def childcare(request):
-    return render(request,'common/childcare.html')   
 
-def neuroscience(request):
-    return render(request,'common/neuroscience.html')    
 
-def liver(request):
-    return render(request,'common/liver.html')  
-
-def orthopaedics(request):
-    return render(request,'common/orthopaedics.html')   
-
-def renalcare(request):
-    return render(request,'common/renalcare.html')  
-
-def endocrine(request):
-    return render(request,'common/endocrine.html')    
-
-def psychiatry(request):
-    return render(request,'common/psychiatry.html')       
-
-def oncology(request):
-    return render(request,'common/oncology.html')         
-
-def anaesthesiology(request):
-    return render(request,'common/anaesthesiology.html')    
-
-def radiology(request):
-    return render(request,'common/radiology.html')    
-
-def dermatology(request):
-    return render(request,'common/dermatology.html')   
-
-def bloodbank(request):
-    return render(request,'common/bloodbank.html')
-
-def demo(request):
-    return render(request,'common/demo-dept.html')

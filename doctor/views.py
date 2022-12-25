@@ -8,25 +8,13 @@ def dr_profile(request):
     return render(request,'doctor/dr_profile.html')
 
 def edit_dr_profile(request):
-    return render(request,'doctor/edit_profile.html')
-
-def dr_patient(request):
-    return render(request,'doctor/patient.html')
+    return render(request,'doctor/dr_edit_profile.html')
 
 def my_appointments(request):
     return render(request,'doctor/my_appointments.html')
 
-def prescription(request):
-    return render(request,'doctor/prescription.html')
-
-def schedule(request):
-    return render(request,'doctor/schedule.html')
-
-def holiday(request):
-    return render(request,'doctor/holiday.html')
-
-def dr_login(request):
-    return render(request,'doctor/dr_login.html')
+def patient_search(request):
+    return render(request,'doctor/pt_search.html')
 
 def chg_pwd(request):
-    return render(request,'doctor/change_pwd.html')
+    return render(request,'doctor/dr_change_pwd.html')

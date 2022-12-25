@@ -4,17 +4,17 @@ from django.shortcuts import render
 def staff_home(request):
     return render(request,'staff/staff_home.html')
 
-def regn(request):
+def registration(request):
     return render(request,'staff/registration.html')
 
-def app(request):
+def appointments(request):
     return render(request,'staff/appointments.html')
 
 def pt_search(request):
     return render(request,'staff/patient_search.html')
-
-def filter(request):
-    return render(request,'staff/filter.html')
-    
+   
 def staff_list(request):
     return render(request,'staff/staff.html')
+
+def profile(request):
+    return render(request,'staff/staff_profile.html')

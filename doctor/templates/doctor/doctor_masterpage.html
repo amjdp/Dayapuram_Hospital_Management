@@ -84,38 +84,54 @@
                                 Departments
                             </a>
                         </li>
-
+                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="dropdown03" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Profile <i class="icofont-thin-down"></i></a>
+                                aria-haspopup="true" aria-expanded="false"> Profile </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'doctor:dr-pro' %}">
-                                        My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'doctor:chg-pwd' %}">
-                                        Change Password
-                                    </a>
+                                <li><a class="dropdown-item" href="{% url 'doctor:dr-pro' %}"> My Profile </a></li>
+                                <li><a class="dropdown-item" href="{% url 'doctor:chg-pwd' %}"> Change Password </a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="../patient"> Patients </a>
+                            <a class="nav-link" href="{% url 'doctor:search-pt' %}"> Patients </a>
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="../appointment"> Appointments</a>
+                            <a class="nav-link" href="{% url 'doctor:my-appointments' %}"> Appointments</a>
                         </li>
 
-                        <li class="nav-item active">
+
+                         <!-- Avatar -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                                    class="rounded-circle" height="50" alt="Avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'doctor:dr-pro' %}">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'doctor:chg-pwd' %}">Change Password</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'common:com-home' %}">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <!-- Logout  -->
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="{% url 'common:com-home' %}">
                                 <span class="material-symbols-rounded"> Logout </span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -125,87 +141,6 @@
 
     {% block content %}
 
-    <div class="container-xxl flex-grow-1 container-p-y">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card-category-5">
-                    <!-- <div class="category-name">Personal Cards</div> <br/><br/> -->
-
-                    <ul class="all-pr-cards">
-                        <li>
-                            <div class="per-card-3">
-                                <div class="card-image">
-                                    <span></span>
-                                    <img src="{% static 'assets/img/calendar.png' %}" class="logo" />
-                                </div>
-
-                                <div class="card-content">
-                                    <span class="per-position"><br /><br />TOTAL APPOINTMENTS</span>
-                                    <div class="social-icons">
-                                        <i class="fa-solid fa-7" style="font-style: #fff"><br />0</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="per-card-3">
-                                <div class="card-image">
-                                    <span></span>
-                                    <img src="{% static 'images/pt.png' %}" class="logo" />
-                                </div>
-
-                                <div class="card-content">
-                                    <span class="per-position"><br /><br />TOTAL PATIENTS</span>
-                                    <div class="social-icons">
-                                        <i class="fa-solid fa-7" style="font-style: #fff"><br />0</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card-category-5">
-                    <!-- <div class="category-name">Personal Cards</div> <br/><br/> -->
-
-                    <ul class="all-pr-cards">
-                        <li>
-                            <div class="per-card-3">
-                                <div class="card-image">
-                                    <span></span>
-                                    <img src="{% static 'assets/img/images.png' %}" class="logo" />
-                                </div>
-
-                                <div class="card-content mb-5">
-                                    <span class="per-position"><br /><br />DEPARTMENTS</span>
-                                    <div class="social-icons">
-                                        <i class="fa-solid fa-7" style="font-style: #fff"><br />0</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="per-card-3">
-                                <div class="card-image">
-                                    <span></span>
-                                    <img src="{% static 'images/pt.png' %}" class="logo" />
-                                </div>
-
-                                <div class="card-content mb-5">
-                                    <span class="per-position"><br /><br />PATIENTS LIST</span>
-                                    <div class="social-icons">
-                                        <i class="fa-solid fa-7" style="font-style: #fff"><br />0</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
     {% endblock %}
 

@@ -3,59 +3,9 @@
 
 {% block header %}
 
-<!-- <link rel="stylesheet" href="{% static 'assets/css/patient_search.css' %}" /> -->
+<link rel="stylesheet" href="{% static 'css/patient_search.css' %}" />
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-
-<style>
-	* {
-		box-sizing: border-box;
-	}
-
-	/* .pt_container {
-		background-color: aqua;
-		width: 1000px;
-		margin-left: 20px;
-	} */
-
-	#myInput {
-		background-image: url('/css/searchicon.png');
-		background-position: 10px 12px;
-		background-repeat: no-repeat;
-		width: 100%;
-		font-size: 16px;
-		padding: 12px 20px 12px 40px;
-		border: 1px solid #ddd;
-		margin-bottom: 12px;
-	}
-
-	#myUL {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	#myUL li a {
-		border: 1px solid #ddd;
-		margin-top: -1px;
-		/* Prevent double borders */
-		background-color: #f6f6f6;
-		padding: 12px;
-		text-decoration: none;
-		font-size: 18px;
-		color: black;
-		display: block
-	}
-
-	#myUL li a:hover:not(.header) {
-		background-color: #eee;
-	}
-
-	.container-fluid{
-		min-height: 800px;
-		width: 80%;
-	}
-</style>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -65,7 +15,9 @@
 
 <div class="container-fluid">
 	
-	<h2>Patients List</h2>
+	<h1 style="color: rgb(6, 6, 165); text-align: center;" class="mb-2">
+		Patients List
+	  </h1>
 
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" />
 
