@@ -23,7 +23,7 @@ def login(request):
     return render(request,'common/login.html')
 
 def dept_single(request):
-    return render(request,'common/department-single.html')
+    return render(request,'common/department_single.html')
 
 def doctor_single(request):
     return render(request,'common/doctor_single.html')
@@ -33,9 +33,7 @@ def doctor(request):
 
 def login_common(request):
     return render(request,'common/login_base.html')
-
-def heartcare(request):
-    return render(request,'common/heartcare.html')     
+   
  
 
 
